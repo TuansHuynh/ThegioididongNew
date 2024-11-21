@@ -1,21 +1,16 @@
 <?php
-$serverName = "HUYNH-ANH-TUAN\TUANSHUYNH"; // hoặc "127.0.0.1", hoặc tên server của bạn
-$connectionInfo = array(
-    "Database" => "Thegioididong_admin",  // Tên cơ sở dữ liệu
-    "UID" => "sa",     // Tài khoản SQL Server
-    "PWD" => "123"      // Mật khẩu
-);
+$serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";
+$connectionOptions = [
+    "Database" => "Thegioididong_admin",
+    "UID" => "sa",
+    "PWD" => "123"
+];
 
-// Kết nối
-$conn = sqlsrv_connect($serverName, $connectionInfo);
+$conn = sqlsrv_connect($serverName, $connectionOptions);
 
-// Kiểm tra kết nối
-if ($conn) {
-    echo "Kết nối thành công!";
+if ($conn === false) {
+    die("Kết nối thất bại: " . print_r(sqlsrv_errors(), true));
 } else {
-    echo "Kết nối thất bại: " . print_r(sqlsrv_errors(), true);
+    echo "Kết nối thành công!";
 }
-
-// Đóng kết nối
-sqlsrv_close($conn);
 ?>
