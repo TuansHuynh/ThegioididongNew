@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24h Công nghệ - Trang công nghệ Thế giới di động</title>
+    <link rel="icon" href="Image/logo-icon.jpg">
+    <link rel="stylesheet" href="assets/css/Style.css">
+    <link rel="stylesheet" href="assets/css/Order.css">
+    <link rel="stylesheet" href="assets/css/24hTech.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img class="header_banner" src="Image/banner.jpg"></a>
+    </nav>
+<!--------------------------------Header----------------------------->
+<header>
+    <nav>
+        <div class="menu_1">
+            <a href="index.html"><img class="nav_logo" src="Image/logo_tgdd.jpg"></a>
+            <ul class="header_menu_1">
+                <li id="address" class="menu_li_1">Chọn địa chỉ<i class='bx bx-caret-down'></i></li>
+                <li class="menu_li_2"><input type="text" placeholder="Bạn cần tìm gì ?"><i class='bx bx-search'></i></li>
+                <li class="menu_li_4"><a href="cart.html">Tài Khoản <br> & Đơn Hàng</a></li>
+                <li id="cart" class="menu_li_3"><a class="cart" href="#"><i class='bx bx-cart-alt'></i>Giỏ Hàng</a></li>
+                <li class="menu_li_5"><a href="24hTech.html">24h <br> Công Nghệ</a></li>
+                <li class="menu_li_6 drawer hline"><a href="Q&A.html">Hỏi Đáp</a></li>
+                <li class="menu_li_7 drawer hline"><a href="Login.html">Đăng Nhập</a></li>
+            </ul>
+<!--------------------------------Cart----------------------------->
+            <div class="order" id="order">
+                <h2>Sản phẩm đã đặt hàng</h2>
+                <div class="close">
+                    <p id="close">X Đóng</p>
+                </div>
+                <div class="order_container">
+                    <div class="order_list">
+                        <form action="">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sản phẩm</th>
+                                        <th>Giá gốc</th>
+                                        <th>Số lượng</th>
+                                        <th>Chọn</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </form>
+                        <div class="price-total">
+                            <p>Tổng tiền: <span>0</span><sup>đ</sup></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--------------------------------Address----------------------------->
+            <div class="address-container">
+                <div class="address-content">
+                    <h2>Chọn địa chỉ nhận hàng<span id="adress-close">X Đóng</span></h2>
+                    <form action="">
+                        <select id="city" name="">
+                            <option value="" selected>Chọn tỉnh thành</option>
+                        </select>
+
+                        <select id="district" name="">
+                            <option value="" selected>Chọn quận huyện</option>
+                        </select>
+
+                        <select id="ward" name="">
+                            <option value="" selected>Chọn phường xã</option>
+                        </select>
+
+                        <input type="text" placeholder="Số nhà, tên đường">
+                        <button type='button' id="location-confirm">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+        <div class="menu_2">
+            <ul class="header_menu_2">
+                <li><a href="Phone.html"><img src="Image/Icon/phonne.png">Điện thoại</a></li>
+                <li><a href="Laptop.html"><img src="Image/Icon/laptop.png">Laptop</a></li>
+                <li><a href="Tablet.html"><img src="Image/Icon/tablet.png">Tablet</a></li>
+                <li  class="menu_2_li"><a href="#"><img src="Image/Icon/phu-kien.png">Phụ kiện<i class='bx bx-caret-down'></i></a>
+                    <div class="phu-kien">
+                        <div class="phu-kien_container">
+                            <ul>
+                                <li class="phu-kien_li"><span>Phụ kiện di động</span></li>
+                                <li><a href="#">Sạc dự phòng</a></li>
+                                <li><a href="#">Sạc, cáp</a></li>
+                                <li><a href="#">Hub, cáp chuyển đổi</a></li>
+                                <li><a href="#">Ốp lưng điện thoại</a></li>
+                                <li><a href="#">Ốp lưng máy tính bảng</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thiết bị âm thanh</span></li>
+                                <li><a href="#">Tai nghe Bluetooth</a></li>
+                                <li><a href="#">Tai nghe dây</a></li>
+                                <li><a href="#">Tai nghe chụp tai</a></li>
+                                <li><a href="#">Tai nghe truyền xương</a></li>
+                                <li><a href="#">Loa</a></li>
+                                <li><a href="#">Micro</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Phụ kiện laptop</span></li>
+                                <li><a href="#">Chuột máy tính</a></li>
+                                <li><a href="#">Bàn phím</a></li>
+                                <li><a href="#">Router - Thiết bị mạng</a></li>
+                                <li><a href="#">Balo, túi chống sốc</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thiết bị nhà thông minh</span></li>
+                                <li><a href="#">Camera trong nhà</a></li>
+                                <li><a href="#">Camera ngoài trời</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thiết bị lưu trữ</span></li>
+                                <li><a href="#">Ổ cứng di động</a></li>
+                                <li><a href="#">Thẻ nhớ</a></li>
+                                <li><a href="#">Usb</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thương hiệu hàng đầu</span></li>
+                                <li><a href="#">Apple</a></li>
+                                <li><a href="#">Samsung</a></li>
+                                <li><a href="#">Dell</a></li>
+                                <li><a href="#">Asus</a></li>
+                                <li><a href="#">MSI</a></li>
+                                <li><a href="#">Acer</a></li>
+                                <li><a href="#">HP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#"><img src="Image/Icon/smartwatch.png">Smartwatch</a></li>
+                <li><a href="#"><img src="Image/Icon/watch.png">Đồng hồ</a></li>
+                <li><a href="#"><img src="Image/Icon/may-cu.png">Thu cũ đổi mới</a></li>
+                <li><a href="#"><img src="Image/Icon/PC.png">PC, Máy in</a></li>
+                <li><a href="#"><img src="Image/Icon/sim.png">Sim, Thẻ cào</a></li>
+                <li><a href="#"><img src="Image/Icon/tien-ich.png">Dịch vụ tiện ích</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="menu_container">
+        <div class="menu_list">
+            <ul>
+                <li><a href="#">MỚI NHẤT</a></li>
+                <li><a href="#">SẢN PHẨM MỚI</a></li>
+                <li><a href="#">ĐÁNH GIÁ</a></li>
+                <li><a href="#">MẸO HAY</a></li>
+                <li><a href="#">TƯ VẤN</a></li>
+                <li><a href="#">SỰ KIỆN</a></li>
+                <li><a href="#">STORIES</a></li>
+                <li><a href="#">KHUYẾN MÃI</a></li>
+                <li><a href="#">LAPTOP</a></li>
+                <li><a href="#">GAME/APP</a></li>
+            </ul>
+        </div>
+        <div class="news_container">
+            <div class="news_container_1">
+                <div class="news_content_1">
+                    <div class="news_1">
+                        <img src="Image/News 24h/news 1.jpg">
+                        <a href="#"><strong>Chỉ còn hôm nay: Hotsale đồng hồ GPS cao cấp Amazfit T-Rex 3, tính năng cực nhiều, giá bán siêu 'yêu'</strong></a>
+                        <p>Đồng hồ GPS cao cấp Amazfit T-Rex 3 chính thức mở bán với nhiều tính năng vượt trội như: GPS băng tần kép, bản đồ tích hợp, pin lên đến 27 ngày và khả năng kháng nước 10 ATM.</p>
+                    </div>
+                    <div class="news_container_content">
+                        <div class="news_2">
+                            <img src="Image/News 24h/news 2.jpg">
+                            <a href="#"><strong>OPPO Find X8 series được xác nhận ra mắt ngày 24/10, dùng chip Dimensity 9400</strong></a>
+                        </div>
+                        <div class="news_3">
+                            <p><a href="#">Đẹp đúng gu - Glow đúng chất với phụ kiện iPhone 16 series chỉ từ 70K</a></p>
+                            <p><a href="#">Hướng dẫn bạn cách tóm tắt trang web bằng Galaxy AI để tiết kiệm thời gian đọc hiệu quả</a></p>
+                            <p><a href="#">Galaxy A16 5G ra mắt: 6 năm cập nhật Android, màn hình AMOLED và camera 50 MP</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news_content_2">
+                    <div class="news_4">
+                        <img src="Image/News 24h/news 3.jpg">
+                        <div class="description">
+                            <p><a href="#">Làm sao để xem lại video đã xem trên TikTok? Xem ngay hướng dẫn bên dưới nhé</a></p>
+                            <p>Bùi Hữu Kiện</p>
+                        </div>
+                    </div>
+                    <div class="news_4">
+                        <img src="Image/News 24h/news 1.jpg">
+                        <div class="description">
+                            <p><a href="#">Chỉ còn hôm nay: Hotsale đồng hồ GPS cao cấp Amazfit T-Rex 3, tính năng cực nhiều, giá bán siêu 'yêu'</a></p>
+                            <p>Vinh Mai</p>
+                        </div>
+                    </div>
+                    <div class="news_4">
+                        <img src="Image/News 24h/news 4.jpg">
+                        <div class="description">
+                            <p><a href="#">iPhone 16 Pro Max: Chiếc điện thoại chụp ảnh chuyên nghiệp trong tầm tay</a></p>
+                            <p>Duy Linh</p>
+                        </div>
+                    </div>
+                    <div class="news_4">
+                        <img src="Image/News 24h/news 5.jpg">
+                        <div class="description">
+                            <p><a href="#">Lộ bằng chứng cho thấy Redmi Note 14 5G sắp sửa ra mắt thị trường quốc tế</a></p>
+                            <p>Nguyễn Thành</p>
+                        </div>
+                    </div>
+                    <div class="news_4">
+                        <img src="Image/News 24h/news 6.jpg">
+                        <div class="description">
+                            <p><a href="#">Trên tay ASUS Zenbook S 14 UX5406: Ngoại hình cao cấp, bền bỉ, hiệu năng mạnh mẽ với chip Intel Core Ultra 7 (Series 2)</a></p>
+                            <p>Vương Bảo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news_container_2">
+                <div class="news_content_3">
+                    <div class="news_banner">
+                        <img src="Image/News 24h/news banner 1.png">
+                    </div>
+                    <div class="news_menu_1">
+                        <p><a href="#">BÀI VIẾT SẢN PHẨM MỚI</a></p>
+                        <div class="news_menu_content_1">
+                            <img src="Image/News 24h/IP16 1.png">
+                            <div class="news_menu_sub">
+                                <p><a href="#">iPhone 16 128GB</a></p>
+                                <p class="sub_1">26 bài viết</p>
+                            </div>
+                        </div>
+                        <div class="news_menu_content_1">
+                            <img src="Image/News 24h/iP16 2.png">
+                            <div class="news_menu_sub">
+                                <p><a href="#">iPhone 16 128GB</a></p>
+                                <p class="sub_1">17 bài viết</p>
+                            </div>
+                        </div>
+                        <div class="news_menu_content_1">
+                            <img src="Image/News 24h/iP16 2.png">
+                            <div class="news_menu_sub">
+                                <p><a href="#">iPhone 16 Pro Max 256GB</a></p>
+                                <p class="sub_1">21 bài viết</p>
+                            </div>
+                        </div>
+                        <div class="news_menu_content_1">
+                            <img src="Image/News 24h/ss s24.jpg">
+                            <div class="news_menu_sub">
+                                <p><a href="#">Samsung Galaxy S24 FE 5G 8GB/128GB</a></p>
+                                <p class="sub_1">22 bài viết</p>
+                            </div>
+                        </div>
+                        <div class="news_menu_content_1">
+                            <img src="Image/News 24h/oppo.jpg">
+                            <div class="news_menu_sub">
+                                <p><a href="#">OPPO Find X8</a></p>
+                                <p class="sub_1">12 bài viết</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news_content_4">
+                    <div class="news_content_4_sub_1">
+                        <img src="Image/News 24h/news 1.jpg">
+                        <p>Chỉ còn hôm nay: Hotsale đồng hồ GPS cao cấp Amazfit T-Rex 3, tính năng cực nhiều, giá bán siêu 'yêu'</p>
+                    </div>
+                    <div class="news_content_4_sub_2">
+                        <div class="news_sub_children_1">
+                            <img src="Image/News 24h/news 7.jpg">
+                            <p>Phụ kiện Anker mua kèm iPhone 16 series giảm ngay 35%, nhiều mẫu đang khuyến mãi đến 40%</p>
+                        </div>
+                        <div class="news_sub_children_2">
+                            <img src="Image/News 24h/news 8.jpg">
+                            <p>Đẹp đúng gu - Glow đúng chất với phụ kiện iPhone 16 series chỉ từ 70K</p>
+                        </div>
+                    </div>
+                    <div class="news_content_4_sub_2">
+                        <div class="news_sub_children_1">
+                            <img src="Image/News 24h/news 9.jpg">
+                            <p>Mua Vivo V40 Lite - hưởng trọn ưu đãi Vivo Care+ với 2 năm bảo hành, miễn phí thay pin 4 năm</p>
+                        </div>
+                        <div class="news_sub_children_2">
+                            <img src="Image/News 24h/news 10.jpg">
+                            <p>Siêu sale 10/10: Deal hời thay lời muốn nói, giảm đến 70% cho nhiều sản phẩm công nghệ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</main>
+
+<footer>
+    <div class="footer_container">
+        <div class="sticky_footer">
+            <ul>
+                <li><a href="#">Tích điểm quà tặng</a></li>
+                <li><a href="#">Lịch sử mua hàng</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+                <li><a href="#">Giao hàng & Thanh toán</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Hướng dẫn mua online</a></li>
+                <li><a href="#">Bán hàng doanh nghiệp</a></li>
+                <li><a href="#">Chất lượng phục vụ</a></li>
+                <li><a href="#">Cảnh báo giả mạo</a></li>
+                <li><a href="#"> Gửi góp ý, khiếu nại</a></li>
+            </ul>
+        </div>
+        <div class="middle_footer">
+            <h3>Tổng đài hỗ trợ</h3>
+            <ul>
+                <span><li><a href="#">Gọi mua:</a></li><p style="margin-left: 13px;"><mark>1900 232 460</mark> (8:00 - 21:30)</p></span>
+                <span><li><a href="#">Khiếu nại:</a></li><p><mark>1800.1062</mark> (8:00 - 21:30)</p></span>
+                <span><li><a href="#">Bảo hành:</a></li><p><mark>1900 232 464</mark> (8:00 - 21:30)</p></span>
+                
+            </ul>
+        </div>
+        <div class="last_footer">
+            <h4>Website cùng tập đoàn</h4>
+            <div>
+                <img class="img_1" src="Image/Brand/top zone.png">
+                <img class="img_2" src="Image/Brand/dienmayxanh.png">
+                <img class="img_3" src="Image/Brand/bachhoaxanh.png">
+                <img class="img_4" src="Image/Brand/nhathuocankhang.png">
+            </div>
+            <div>
+                <img class="img_5" src="Image/Brand/ava.png">
+                <img class="img_6" src="Image/Brand/vieclam.png">
+                <img class="img_7" src="Image/Brand/erablue.png">
+            </div>
+        </div>
+    </div>
+</footer>
+<!--------------------------------Script----------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="assets/javascript/Index.js"></script>
+    <script src="assets/javascript/Cart.js"></script>
+    <script src="assets/javascript/Cart-Main.js"></script>
+</body>
+</html>

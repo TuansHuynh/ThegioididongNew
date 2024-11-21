@@ -1,0 +1,116 @@
+.menu_list ul{
+    display: flex;
+}
+.menu_list ul li{
+    font-size: 14px;
+    margin: 0 8px 10px 8px;
+}
+.news_container{
+    display: flex;
+}
+.news_content_1{
+    display: flex;
+}
+.news_1{
+    width: 450px;
+}
+.news_2{
+    width: 300px;
+    height: 250px;
+    margin: 0 10px;
+}
+.news_3{
+    width: 300px;
+    margin: 5px 10px 5px 10px;
+}
+.news_4{
+    width: 700px;
+    display: flex;
+    margin-bottom: 15px;
+    border-top: 2px solid rgb(235, 235, 235);
+    padding-top: 15px;
+}
+.news_1 img{
+    width: 450px;
+}
+.news_2 img{
+    width: 300px;
+}
+.news_4 img{
+    width: 200px;
+}
+.news_1 img, .news_2 img, .news_4 img{
+    border-radius: 10px;
+}
+.news_1 a strong, .news_2 a strong{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.news_1 p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+}
+.news_3 p{
+    margin: 15px 0 0 0;
+    border-top: 1px solid rgb(215, 215, 215);
+    padding-top: 10px;
+}
+.news_4 p{  
+    font-size: 25px;
+    margin-left: 20px;
+    font-weight: 900;
+}
+.news_4 :nth-child(2){
+    font-size: 14px;
+}
+.news_4 .description :nth-child(2){
+    margin-top: 10px;
+    color: rgb(64, 64, 64);
+}
+.news_menu_1 p{
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: 900;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.news_menu_content_1{
+    display: flex;
+}
+.news_menu_content_1 img{
+    margin: 10px -5px 10px 10px;
+    width: 90px;
+}
+.news_menu_sub .sub_1{
+    font-size: 13px;
+    color: #288ad6;
+}
+.news_content_4_sub_1{
+    width: 400px;
+}
+.news_content_4_sub_2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.news_content_4_sub_1 img{
+    width: 400px;
+    border-radius: 10px;
+}
+.news_content_4_sub_2 img{
+    width: 170px;
+    border-radius: 10px;
+}
+.news_content_4_sub_1 p{
+    font-size: 20px;
+    color: #212121;
+    font-weight: 900;
+}
+.news_sub_children_1, .news_sub_children_2 {
+    width: 180px;
+    cursor: pointer;
+}
+.news_sub_children_1 p, .news_sub_children_2 p{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}

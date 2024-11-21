@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - Điện thoại</title>
+    <link rel="icon" href="Image/logo-icon.jpg">
+    <link rel="stylesheet" href="assets/css/Style.css">
+    <link rel="stylesheet" href="assets/css/Order.css">
+    <!-- <link rel="stylesheet" href="assets/css/Cart.css"> -->
+    <link rel="stylesheet" href="assets/css/Phone.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img class="header_banner" src="Image/banner.jpg"></a>
+    </nav>
+<!--------------------------------Header----------------------------->
+<header>
+    <nav>
+        <div class="menu_1">
+            <a href="index.html"><img class="nav_logo" src="Image/logo_tgdd.jpg"></a>
+            <ul class="header_menu_1">
+                <li id="address" class="menu_li_1">Chọn địa chỉ<i class='bx bx-caret-down'></i></li>
+                <li class="menu_li_2"><input type="text" placeholder="Bạn cần tìm gì ?"><i class='bx bx-search'></i></li>
+                <li class="menu_li_4"><a href="cart.html">Tài Khoản <br> & Đơn Hàng</a></li>
+                <li id="cart" class="menu_li_3"><a class="cart" href="#"><i class='bx bx-cart-alt'></i>Giỏ Hàng</a></li>
+                <li class="menu_li_5"><a href="24hTech.html">24h <br> Công Nghệ</a></li>
+                <li class="menu_li_6 drawer hline"><a href="Q&A.html">Hỏi Đáp</a></li>
+                <li class="menu_li_7 drawer hline"><a href="Login.html">Đăng Nhập</a></li>
+            </ul>
+<!--------------------------------Cart----------------------------->
+            <div class="order" id="order">
+                <h2>Sản phẩm đã đặt hàng</h2>
+                <div class="close">
+                    <p id="close">X Đóng</p>
+                </div>
+                <div class="order_container">
+                    <div class="order_list">
+                        <form action="">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sản phẩm</th>
+                                        <th>Giá gốc</th>
+                                        <th>Số lượng</th>
+                                        <th>Chọn</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <!-- <tr>
+                                            <td  style="display: flex; align-items: center; text-align: center;">
+                                                <img src="Image/Phone/Iphone 14.jpg"><Iphone13 128GB
+                                            </td>
+                                            
+                                            <td>
+                                                <p><span>30.000.000</span><sup>đ</sup></p>
+                                            </td>
+
+                                            <td>
+                                                <input type="number" value="2" min="1" >
+                                            </td>
+                                            
+                                            <td style="cursor: pointer; text-align: center;">
+                                                Xoá
+                                            </td>
+                                        </tr>
+                                </tbody> -->
+                            </table>
+                        </form>
+                        <div class="price-total">
+                            <p>Tổng tiền: <span>0</span><sup>đ</sup></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--------------------------------Address----------------------------->
+            <div class="address-container">
+                <div class="address-content">
+                    <h2>Chọn địa chỉ nhận hàng<span id="adress-close">X Đóng</span></h2>
+                    <form action="">
+                        <select id="city" name="">
+                            <option value="" selected>Chọn tỉnh thành</option>
+                        </select>
+
+                        <select id="district" name="">
+                            <option value="" selected>Chọn quận huyện</option>
+                        </select>
+
+                        <select id="ward" name="">
+                            <option value="" selected>Chọn phường xã</option>
+                        </select>
+
+                        <input type="text" placeholder="Số nhà, tên đường">
+                        <button type='button' id="location-confirm">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div>
+<!--------------------------------Header----------------------------->
+        </div>
+        <div class="menu_2">
+            <ul class="header_menu_2">
+                <li><a href="Phone.html"><img src="Image/Icon/phonne.png">Điện thoại</a></li>
+                <li><a href="Laptop.html"><img src="Image/Icon/laptop.png">Laptop</a></li>
+                <li><a href="Tablet.html"><img src="Image/Icon/tablet.png">Tablet</a></li>
+                <li  class="menu_2_li"><a href="#"><img src="Image/Icon/phu-kien.png">Phụ kiện<i class='bx bx-caret-down'></i></a>
+                    <div class="phu-kien">
+                        <div class="phu-kien_container">
+                            <ul>
+                                <li class="phu-kien_li"><span>Phụ kiện di động</span></li>
+                                <li><a href="#">Sạc dự phòng</a></li>
+                                <li><a href="">Sạc, cáp</a></li>
+                                <li><a href="">Hub, cáp chuyển đổi</a></li>
+                                <li><a href="">Ốp lưng điện thoại</a></li>
+                                <li><a href="">Ốp lưng máy tính bảng</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thiết bị âm thanh</span></li>
+                                <li><a href="">Tai nghe Bluetooth</a></li>
+                                <li><a href="">Tai nghe dây</a></li>
+                                <li><a href="">Tai nghe chụp tai</a></li>
+                                <li><a href="">Tai nghe truyền xương</a></li>
+                                <li><a href="">Loa</a></li>
+                                <li><a href="">Micro</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Phụ kiện laptop</span></li>
+                                <li><a href="">Chuột máy tính</a></li>
+                                <li><a href="">Bàn phím</a></li>
+                                <li><a href="">Router - Thiết bị mạng</a></li>
+                                <li><a href="">Balo, túi chống sốc</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thiết bị nhà thông minh</span></li>
+                                <li><a href="">Camera trong nhà</a></li>
+                                <li><a href="">Camera ngoài trời</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thiết bị lưu trữ</span></li>
+                                <li><a href="">Ổ cứng di động</a></li>
+                                <li><a href="">Thẻ nhớ</a></li>
+                                <li><a href="">Usb</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thương hiệu hàng đầu</span></li>
+                                <li><a href="">Apple</a></li>
+                                <li><a href="">Samsung</a></li>
+                                <li><a href="">Dell</a></li>
+                                <li><a href="">Asus</a></li>
+                                <li><a href="">MSI</a></li>
+                                <li><a href="">Acer</a></li>
+                                <li><a href="">HP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#"><img src="Image/Icon/smartwatch.png">Smartwatch</a></li>
+                <li><a href="#"><img src="Image/Icon/watch.png">Đồng hồ</a></li>
+                <li><a href="#"><img src="Image/Icon/may-cu.png">Thu cũ đổi mới</a></li>
+                <li><a href="#"><img src="Image/Icon/PC.png">PC, Máy in</a></li>
+                <li><a href="#"><img src="Image/Icon/sim.png">Sim, Thẻ cào</a></li>
+                <li><a href="#"><img src="Image/Icon/tien-ich.png">Dịch vụ tiện ích</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="product_container">
+        <div class="menu_container">
+            <div class="menu_list">
+                <ul>
+                    <li class="menu_child"><a href=""><i class='bx bx-filter-alt'></i>Lọc</a></li>
+                    <li><a href="#"><img src="Image/Icon/iphone.png"></a></li>
+                    <li><a href="#"><img src="Image/Icon/samsung.png"></a></li>
+                    <li><a href="#"><img src="Image/Icon/xiaomi.png"></a></li>
+                    <li><a href="#"><img src="Image/Icon/oppo.png"></a></li>
+                </ul>
+            </div>
+            <div class="menu_list_2">
+                <ul>
+                    <li>Sắp xếp theo: </li>
+                    <li><a href="#">Nổi bật</a></li>
+                    <li><a href="#">Bán chạy</a></li>
+                    <li><a href="#">Giảm giá</a></li>
+                    <li><a href="#">Mới</a></li>
+                    <li style="margin-top: -20px;"><a href="#">
+                        <select style="border: none; outline: none;">
+                            <option>Giá cao - thấp</option>
+                            <option>Giá thấp - cao</option>
+                        </select>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="product_grid_container">
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Oppo Find N3.jpg"></a>
+                <a href="#">OPPO Find N3 5G 16GB/512GB</a>
+                <div class="items_sub_container_1">
+                    <p class="items_sub">Chính 7.82" & Phụ 6.31"</p>
+                    <p class="items_sub">Quad HD+ (2K+)</p>
+                </div>
+                <p><strong class="prices">41.990.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">44.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-6%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Z Fold 6.jpg"></a>
+                <a href="#">Samsung Galaxy Z Fold6 5G</a>
+                <div class="items_sub_container_2">
+                    <p class="items_sub">Chính 7.6" & Phụ 6.3"</p>
+                    <p class="items_sub">QXGA+</p>
+                </div>
+                <p style="margin-top: 35px;"><strong class="prices">41.990.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">43.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-4%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Z Fold 5.jpg"></a>
+                <a href="#">Samsung Galaxy Z Fold5 5G 12GB/256GB</a>
+                <div class="items_sub_container_3">
+                    <p class="items_sub">Chính 7.6" & Phụ 6.2"</p>
+                    <p class="items_sub">Quad HD+ (2K+)</p>
+                </div>
+                <p><strong class="prices">24.290.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">40.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-40%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <div class="items_sub_head">
+                    <p class=" tra-gop new_prod">Mẫu mới</p>
+                    <p class="tra-gop">Trả góp 0%</p>
+                </div>
+                <a href="#"><img src="Image/Phone/iPhone 16 pro max.jpg"></a>
+                <a href="#">iPhone 16 Pro Max</a>
+                <div class="items_sub_container_4">
+                    <p class="items_sub">6.9"</p>
+                    <p class="items_sub">Super Retina XDR</p>
+                </div>
+                <p style="margin-top: 34px;"><strong class="prices">34.990.000<span>₫</span></strong></p>
+                <!-- <p><span style="text-decoration-line: line-through;">44.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-6%</span></p> -->
+                <button class="items_button"  style="margin: -20px 0px 0px 140px;">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Xiaomi 14 ultra 5g.jpg"></a>
+                <a href="#">Xiaomi 14 Ultra 5G 16GB/512GB</a>
+                <div class="items_sub_container_5">
+                    <p class="items_sub">6.73"</p>
+                    <p class="items_sub">Quad HD+ (2K+)</p>
+                </div>
+                <p><strong class="prices">29.990.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">32.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-9%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Iphone 15.jpg"></a>
+                <a href="#">iPhone 15 Pro Max</a>
+                <div class="items_sub_container_6">
+                    <p class="items_sub">6.7"</p>
+                    <p class="items_sub">Super Retina XDR</p>
+                </div>
+                <p><strong class="prices">29.590.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">34.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-15%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <div class="items_sub_head">
+                    <p class=" tra-gop new_prod">Mẫu mới</p>
+                    <p class="tra-gop">Trả góp 0%</p>
+                </div>
+                <a href="#"><img src="Image/Phone/iPhone 16 pro max.jpg"></a>
+                <a href="#">iPhone 16 Pro</a>
+                <div class="items_sub_container_7">
+                    <p class="items_sub">6.3"</p>
+                    <p class="items_sub">Super Retina XDR</p>
+                </div>
+                <p><strong class="prices">28.990.000<span>₫</span></strong></p>
+                <!-- <p><span style="text-decoration-line: line-through;"></span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-6%</span></p> -->
+                <button class="items_button"  style="margin: -20px 0px 0px 140px;">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Iphone 14 Pro Max.jpg"></a>
+                <a href="#">iPhone 14 Pro Max 256GB</a>
+                <div class="items_sub_container_8">
+                    <p class="items_sub">6.7"</p>
+                    <p class="items_sub">Super Retina XDR</p>
+                </div>
+                <p><strong class="prices">28.590.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">31.890.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-10%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Iphone 15.jpg"></a>
+                <a href="#">iPhone 15 Pro 256GB</a>
+                <div class="items_sub_container_9">
+                    <p class="items_sub">6.1"</p>
+                    <p class="items_sub">Super Retina XDR</p>
+                </div>
+                <p><strong class="prices">28.290.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">31.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-11%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/S24 Ultra.jpg"></a>
+                <a href="#">Samsung Galaxy S24 Ultra 5G</a>
+                <div class="items_sub_container_10">
+                    <p class="items_sub">6.8"</p>
+                    <p class="items_sub">Quad HD+ (2K+)</p>
+                </div>
+                <p><strong class="prices">27.990.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">33.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-17%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Z Flip 6.jpg"></a>
+                <a href="#">Samsung Galaxy Z Flip6 5G</a>
+                <div class="items_sub_container_11">
+                    <p class="items_sub">Chính 6.7" & Phụ 3.4"</p>
+                    <p class="items_sub">Full HD+</p>
+                </div>
+                <p><strong class="prices">25.990.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">27.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-7%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <div class="items_sub_head">
+                    <p class=" tra-gop new_prod">Mẫu mới</p>
+                    <p class="tra-gop">Trả góp 0%</p>
+                </div>
+                <a href="#"><img src="Image/Phone/iPhone 16 Plus.jpg"></a>
+                <a href="#">iPhone 16 Plus</a>
+                <div class="items_sub_container_12">
+                    <p class="items_sub">6.7"</p>
+                    <p class="items_sub">Super Retina XDR</p>
+                </div>
+                <p style="margin-top: 24px;"><strong class="prices">25.990.000<span>₫</span></strong></p>
+                <!-- <p><span style="text-decoration-line: line-through;"></span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-6%</span></p> -->
+                <button class="items_button"  style="margin: -20px 0px 0px 140px;">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/S23 Ultra 5g.jpg"></a>
+                <a href="#">Samsung Galaxy S23 Ultra 5G</a>
+                <div class="items_sub_container_13">
+                    <p class="items_sub">6.8"</p>
+                    <p class="items_sub">Quad HD+ (2K+)</p>
+                </div>
+                <p><strong class="prices">21.490.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">24.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-14%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Oppo FInd N3 Flip 5g.jpg"></a>
+                <a href="#">OPPO Find N3 Flip 5G</a>
+                <div class="items_sub_container_14">
+                    <p class="items_sub">Chính 6.8" & Phụ 3.26"</p>
+                    <p class="items_sub">Full HD+</p>
+                </div>
+                <p style="margin-top: 4px;"><strong class="prices">22.990.000<span>₫</span></strong></p>
+                <!-- <p><span style="text-decoration-line: line-through;"></span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-6%</span></p> -->
+                <button class="items_button"  style="margin: -20px 0px 0px 140px;">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <div class="items_sub_head">
+                    <p class=" tra-gop new_prod">Mẫu mới</p>
+                    <p class="tra-gop">Trả góp 0%</p>
+                </div>
+                <a href="#"><img src="Image/Phone/iPhone 16 Plus.jpg"></a>
+                <a href="#">iPhone 16</a>
+                <div class="items_sub_container_15">
+                    <p class="items_sub">6.1"</p>
+                    <p class="items_sub">Super Retina XDR</p>
+                </div>
+                <p style="margin-top: 4px;"><strong class="prices">22.990.000<span>₫</span></strong></p>
+                <!-- <p><span style="text-decoration-line: line-through;"></span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-6%</span></p> -->
+                <button class="items_button"  style="margin: -20px 0px 0px 140px;">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product_grid_items">
+                <p class="tra-gop">Trả góp 0%</p>
+                <a href="#"><img src="Image/Phone/Iphone 15 Plus.jpg"></a>
+                <a href="#">iPhone 15 Plus</a>
+                <div class="items_sub_container_16">
+                    <p class="items_sub">6.7"</p>
+                    <p class="items_sub">Super Retina XDR</p>
+                </div>
+                <p style="margin-top: 4px;"><strong class="prices">22.790.000<span>₫</span></strong></p>
+                <p><span style="text-decoration-line: line-through;">25.990.000</span><span style="text-decoration-line: line-through;">₫</span><span class="prod_span" style="margin-left: 5px; background-color: #ff000000; color: red;">-12%</span></p>
+                <button class="items_button">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer_container">
+        <div class="sticky_footer">
+            <ul>
+                <li><a href="#">Tích điểm quà tặng</a></li>
+                <li><a href="#">Lịch sử mua hàng</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+                <li><a href="#">Giao hàng & Thanh toán</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Hướng dẫn mua online</a></li>
+                <li><a href="#">Bán hàng doanh nghiệp</a></li>
+                <li><a href="#">Chất lượng phục vụ</a></li>
+                <li><a href="#">Cảnh báo giả mạo</a></li>
+                <li><a href="#"> Gửi góp ý, khiếu nại</a></li>
+            </ul>
+        </div>
+        <div class="middle_footer">
+            <h3>Tổng đài hỗ trợ</h3>
+            <ul>
+                <span><li><a href="#">Gọi mua:</a></li><p style="margin-left: 13px;"><mark>1900 232 460 </mark>(8:00 - 21:30)</p></span>
+                <span><li><a href="#">Khiếu nại:</a></li><p><mark>1800.1062 </mark>(8:00 - 21:30)</p></span>
+                <span><li><a href="#">Bảo hành:</a></li><p><mark>1900 232 464 </mark>(8:00 - 21:30)</p></span>
+            </ul>
+        </div>
+        <div class="last_footer">
+            <h4>Website cùng tập đoàn</h4>
+            <div>
+                <img class="img_1" src="Image/Brand/top zone.png">
+                <img class="img_2" src="Image/Brand/dienmayxanh.png">
+                <img class="img_3" src="Image/Brand/bachhoaxanh.png">
+                <img class="img_4" src="Image/Brand/nhathuocankhang.png">
+            </div>
+            <div>
+                <img class="img_5" src="Image/Brand/ava.png">
+                <img class="img_6" src="Image/Brand/vieclam.png">
+                <img class="img_7" src="Image/Brand/erablue.png">
+            </div>
+        </div>
+    </div>
+</footer>
+<!--------------------------------Script----------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="assets/javascript/Index.js"></script>
+    <script src="assets/javascript/Cart.js"></script>
+    <script src="assets/javascript/Cart.test.js"></script>
+</body>
+</html>

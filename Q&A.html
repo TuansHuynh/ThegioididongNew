@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỏi đáp về sản phẩm và dịch vụ tại Thegioididong</title>
+    <link rel="icon" href="Image/logo-icon.jpg">
+    <link rel="stylesheet" href="assets/css/Style.css">
+    <link rel="stylesheet" href="assets/css/Order.css"> 
+    <link rel="stylesheet" href="assets/css/Q&A.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img class="header_banner" src="Image/banner.jpg"></a>
+    </nav>
+<!--------------------------------Header----------------------------->
+<header>
+    <nav>
+        <div class="menu_1">
+            <a href="index.html"><img class="nav_logo" src="Image/logo_tgdd.jpg"></a>
+            <ul class="header_menu_1">
+                <li id="address" class="menu_li_1">Chọn địa chỉ<i class='bx bx-caret-down'></i></li>
+                <li class="menu_li_2"><input type="text" placeholder="Bạn cần tìm gì ?"><i class='bx bx-search'></i></li>
+                <li class="menu_li_4"><a href="cart.html">Tài Khoản <br> & Đơn Hàng</a></li>
+                <li id="cart" class="menu_li_3"><a class="cart" href="#"><i class='bx bx-cart-alt'></i>Giỏ Hàng</a></li>
+                <li class="menu_li_5"><a href="24hTech.html">24h <br> Công Nghệ</a></li>
+                <li class="menu_li_6 drawer hline"><a href="Q&A.html">Hỏi Đáp</a></li>
+                <li class="menu_li_7 drawer hline"><a href="Login.html">Đăng Nhập</a></li>
+            </ul>
+
+            <div class="address-container">
+                <div class="address-content">
+                    <h2>Chọn địa chỉ nhận hàng<span id="adress-close">X Đóng</span></h2>
+                    <form action="">
+                        <select id="city" name="">
+                            <option value="" selected>Chọn tỉnh thành</option>
+                        </select>
+
+                        <select id="district" name="">
+                            <option value="" selected>Chọn quận huyện</option>
+                        </select>
+
+                        <select id="ward" name="">
+                            <option value="" selected>Chọn phường xã</option>
+                        </select>
+
+                        <input type="text" placeholder="Số nhà, tên đường">
+                        <button type='button' id="location-confirm">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div>
+            
+        </div>
+        <div class="menu_2">
+            <ul class="header_menu_2">
+                <li><a href="Phone.html"><img src="Image/Icon/phonne.png">Điện thoại</a></li>
+                <li><a href="Laptop.html"><img src="Image/Icon/laptop.png">Laptop</a></li>
+                <li><a href="Tablet.html"><img src="Image/Icon/tablet.png">Tablet</a></li>
+                <li  class="menu_2_li"><a href="#"><img src="Image/Icon/phu-kien.png">Phụ kiện<i class='bx bx-caret-down'></i></a>
+                    <div class="phu-kien">
+                        <div class="phu-kien_container">
+                            <ul>
+                                <li class="phu-kien_li"><span>Phụ kiện di động</span></li>
+                                <li><a href="">Sạc dự phòng</a></li>
+                                <li><a href="">Sạc, cáp</a></li>
+                                <li><a href="">Hub, cáp chuyển đổi</a></li>
+                                <li><a href="">Ốp lưng điện thoại</a></li>
+                                <li><a href="">Ốp lưng máy tính bảng</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thiết bị âm thanh</span></li>
+                                <li><a href="">Tai nghe Bluetooth</a></li>
+                                <li><a href="">Tai nghe dây</a></li>
+                                <li><a href="">Tai nghe chụp tai</a></li>
+                                <li><a href="">Tai nghe truyền xương</a></li>
+                                <li><a href="">Loa</a></li>
+                                <li><a href="">Micro</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Phụ kiện laptop</span></li>
+                                <li><a href="">Chuột máy tính</a></li>
+                                <li><a href="">Bàn phím</a></li>
+                                <li><a href="">Router - Thiết bị mạng</a></li>
+                                <li><a href="">Balo, túi chống sốc</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thiết bị nhà thông minh</span></li>
+                                <li><a href="">Camera trong nhà</a></li>
+                                <li><a href="">Camera ngoài trời</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thiết bị lưu trữ</span></li>
+                                <li><a href="">Ổ cứng di động</a></li>
+                                <li><a href="">Thẻ nhớ</a></li>
+                                <li><a href="">Usb</a></li>
+                            </ul>
+                            
+                            <ul>
+                                <li class="phu-kien_li"><span>Thương hiệu hàng đầu</span></li>
+                                <li><a href="">Apple</a></li>
+                                <li><a href="">Samsung</a></li>
+                                <li><a href="">Dell</a></li>
+                                <li><a href="">Asus</a></li>
+                                <li><a href="">MSI</a></li>
+                                <li><a href="">Acer</a></li>
+                                <li><a href="">HP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#"><img src="Image/Icon/smartwatch.png">Smartwatch</a></li>
+                <li><a href="#"><img src="Image/Icon/watch.png">Đồng hồ</a></li>
+                <li><a href="#"><img src="Image/Icon/may-cu.png">Thu cũ đổi mới</a></li>
+                <li><a href="#"><img src="Image/Icon/PC.png">PC, Máy in</a></li>
+                <li><a href="#"><img src="Image/Icon/sim.png">Sim, Thẻ cào</a></li>
+                <li><a href="#"><img src="Image/Icon/tien-ich.png">Dịch vụ tiện ích</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-----------------------------------Main---------------------------->
+<main>
+    <div class="QandA">
+        <h1><a href="Q&A.html">Hỏi đáp về sản phẩm</a></h1>
+    </div>
+    <div class="chu-de">
+        <div class="chu-de_left">
+            <h2>Chủ đề nổi bật</h2>
+            <div class="chu-de_container">
+                <ul>
+                    <li class="content menu_content_1">
+                        <label class="header_sub" for="">
+                            <img src="Image/Icon/Android.png">
+                            <h3>Android</h3>
+                            <i style="margin-left: 150px;" class='bx bx-chevron-down'></i>
+                        </label>
+                        <div class="sub_content sub_ sub_1">
+                            <ul>
+                                <li><a href="#">Sản phẩm - Phiên bản mới</a></li>
+                                <li><a href="#">Lỗi thường gặp</a></li>
+                                <li><a href="#">Tài khoản Android</a></li>
+                                <li><a href="#">Tư vấn chọn mua</a></li>
+                                <li><a href="#">ROOT Android</a></li>
+                                <li><a href="#">Thủ thuật, mẹo - Hướng dẫn sử dụng</a></li>
+                                <li><a href="#">Khôi phục - Reset</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="content menu_content_2">
+                        <label for="">
+                            <img src="Image/Icon/Apple.png">
+                            <h3>iPhone - IOS</h3>
+                            <i style="margin-left: 118px;" class='bx bx-chevron-down'></i>
+                        </label>
+                        <div class="sub_content sub_2">
+                            <ul>
+                                <li><a href="#">Lỗi thường gặp</a></li>
+                                <li><a href="#">Tư vấn chọn mua</a></li>
+                                <li><a href="#">Jailbreak iOS</a></li>
+                                <li><a href="#">Sản phẩm - Phiên bản mới</a></li>
+                                <li><a href="#">Apple ID - iCloud</a></li>
+                                <li><a href="#">Thủ thuật, mẹo - Hướng dẫn sử dụng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="content menu_content_3">
+                        <label for="">
+                            <img src="Image/Icon/watchh.png">
+                            <h3>Đồng hồ thời trang</h3>
+                            <i style="margin-left: 73px;" class='bx bx-chevron-down'></i>
+                        </label>
+                        <div class="sub_content sub_3">
+                            <ul>
+                                <li><a href="#">Thương hiệu - Dòng sản phẩm nổi bật</a></li>
+                                <li><a href="#">Mẹo - Hướng dẫn sử dụng</a></li>
+                                <li><a href="#">Tư vấn chọn mua</a></li>
+                                <li><a href="#">Tư vấn quà tặng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="content menu_content_4">
+                        <label for="">
+                            <img src="Image/Icon/smartwatchh.jpg">
+                            <h3>Smartwatch</h3>
+                            <i style="margin-left: 122px;" class='bx bx-chevron-down'></i>
+                        </label>
+                        <div class="sub_content sub_4">
+                            <ul>
+                                <li><a href="#">Thương hiệu - sản phẩm nổi bật</a></li>
+                                <li><a href="#">Mẹo sử dụng</a></li>
+                                <li><a href="#">Tư vấn chọn mua</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="content menu_content_5">
+                        <label for="">
+                            <img src="Image/Icon/maytinh.png">
+                            <h3>Máy tính - Laptop - Tablet</h3>
+                            <i style="margin-left: 17px;" class='bx bx-chevron-down'></i>
+                        </label>
+                        <div class="sub_content sub_5">
+                            <ul>
+                                <li><a href="#">Tư vấn mua sản phẩm</a></li>
+                                <li><a href="#">PC - Laptop Windows</a></li>
+                                <li><a href="#">Thủ thuật, mẹo - Hướng dẫn sử dụng</a></li>
+                                <li><a href="#">Máy Mac, MacBook (macOS)</a></li>
+                                <li><a href="#">Sản phẩm, phiên bản mới</a></li>
+                                <li><a href="#">Máy tính bảng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="content menu_content_6">
+                        <label for="">
+                            <img src="Image/Icon/phukien.png">
+                            <h3>Phụ kiện và sản phẩm khác</h3>
+                            <i style="margin-left: 10px;" class='bx bx-chevron-down'></i>
+                        </label>
+                        <div class="sub_content sub_6">
+                            <ul>
+                                <li><a href="#">Sim số - Thẻ cào</a></li>
+                                <li><a href="#">Thủ thuật, mẹo - Hướng dẫn sử dụng</a></li>
+                                <li><a href="#">Máy in - Mực in</a></li>
+                                <li><a href="#">Phụ kiện</a></li>
+                                <li><a href="#">Sản phẩm khác</a></li>
+                                <li><a href="#">Sản phẩm khác</a></li>
+                                <li><a href="#">Điện thoại</a></li>
+                                <li><a href="#">Máy tính bảng</a></li>
+                                <li><a href="#">Laptop</a></li>
+                                <li><a href="#">Mắt kính thời trang</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="content menu_content_7">
+                        <label for="">
+                            <img src="Image/Icon/mayin.png">
+                            <h3>Máy in</h3>
+                            <i style="margin-left: 159px;" class='bx bx-chevron-down'></i>
+                        </label>
+                        <div class="sub_content sub_7">
+                            <ul>
+                                <li><a href="#">Mực máy In</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="content menu_content_8">
+                        <label for="">
+                            <img src="Image/Icon/smarthome.png">
+                            <h3>Thiết bị thông minh</h3>
+                            <i style="margin-left: 65px;" class='bx bx-chevron-down'></i>
+                        </label>
+                        <div class="sub_content sub_8">
+                            <ul>
+                                <li><a href="#">Smarthome</a></li>
+                                <li><a href="#">Phụ kiện thông minh</a></li>
+                                <li><a href="#">Smartcar - Smart Motor</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="content menu_content_9">
+                        <label for="">
+                            <img src="Image/Icon/dienmay.png">
+                            <h3>Điện máy</h3>
+                            <i style="margin-left: 141px;" class='bx bx-chevron-down'></i>
+                        </label>
+                        <div class="sub_content sub_9">
+                            <ul>
+                                <li><a href="#">Tủ lạnh</a></li>
+                                <li><a href="#">Máy lạnh</a></li>
+                                <li><a href="#">Máy giặt</a></li>
+                                <li><a href="#">Gia dụng</a></li>
+                                <li><a href="#">Tivi</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="chu-de_right">
+            <div>
+                <div class="chude_right-head">
+                    <div class="chude_right-start">
+                        <img src="Image/Q&A/top cap sac.jpg">
+                        <a href="#">TOP 5 thương hiệu cáp sạc nổi tiếng chính hãng tại Thế Giới Di Động</a>
+                    </div>
+                    <div class="chude_right-container-main">
+                        <h2>Bài viết được xem nhiều</h2>
+                        <div class="chude_right-end">
+                            <div class="chu-de_sub">
+                                <b>1</b>
+                                <a href="#">Cách kiểm tra điện thoại có hỗ trợ mạng 4G hay không chuẩn xác nhất</a>
+                            </div>
+                            <div class="chu-de_sub">
+                                <b>2</b>
+                                <a href="#">TOP 5 điện thoại Xiaomi dưới 6 triệu chất lượng nhất tại TGDĐ</a>
+                            </div>
+                            <div class="chu-de_sub">
+                                <b>3</b>
+                                <a href="#">Laptop 15 inch dài rộng bao nhiêu? Các mẫu laptop 15 inch tốt nhất</a>
+                            </div>
+                            <div class="chu-de_sub">
+                                <b>4</b>
+                                <a href="#">Laptop 13 inch dài rộng bao nhiêu? Các mẫu laptop 13 inch tốt nhất</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chude_right-container-footer">
+                    <div class="chu-de_sub_1">
+                        <img src="Image/Q&A/top day sac.jpg">
+                        <div>
+                            <a href="#">TOP 10 cáp sạc iPhone 14 chính hãng nên mua tại Thế Giới Di Động</a>
+                            <p>Phụ kiện</p>
+                        </div>
+                    </div>
+                    <div class="chu-de_sub_1">
+                        <img src="Image/Q&A/lao keo.jpg">
+                        <div>
+                            <a href="#">TOP 10 loa kéo hát karaoke hay nhất với âm thanh mạnh mẽ và lôi cuốn</a>
+                            <p>Phụ kiện</p>
+                        </div>
+                    </div>
+                    <div class="chu-de_sub_1">
+                        <img src="Image/Q&A/top 5 laptop.jpg">
+                        <div>
+                            <a href="#">TOP 10 laptop văn phòng dưới 25 triệu mỏng nhẹ đáng sở hữu tại TGDĐ</a>
+                            <p>Tư vấn sản phẩm</p>
+                        </div>
+                    </div>
+                    <div class="chu-de_sub_1">
+                        <img src="Image/Q&A/Top laptop.jpg">
+                        <div>
+                            <a href="#">TOP 10+ laptop tầm 30 triệu chất lượng siêu xịn đáng sở hữu nhất</a>
+                            <p>Tư vấn sản phẩm</p>
+                        </div>
+                    </div>
+                    <div class="chu-de_sub_1">
+                        <img src="Image/Q&A/dthoai sinhvien.jpg">
+                        <div>
+                            <a href="#">TOP 10 điện thoại cho sinh viên giá rẻ đáng mua nhất tại TGDĐ</a>
+                        <p>Tư vấn sản phẩm</p>
+                        </div>
+                    </div>
+                    <div class="chu-de_sub_1">
+                        <img src="Image/Q&A/chuyen vung.jpg">
+                        <div>
+                            <a href="#">Cách chuyển vùng iPhone sang Mỹ, Singapore, Trung Quốc đơn giản</a>
+                            <p>Tư vấn</p>
+                        </div>
+                    </div>
+                    <div class="chu-de_sub_1">
+                        <img src="Image/Q&A/tablet.jpg">
+                        <div>
+                            <a href="#">TOP 10 máy tính bảng pin trâu trên 7000 mAh đáng mua nhất năm 2024</a>
+                            <p>Tư vấn tablet</p>
+                        </div>
+                    </div>
+                    <div class="chu-de_sub_1">
+                        <img src="Image/Q&A/record.jpg">
+                        <div>
+                            <a href="#">Cách quay màn hình máy tính nhanh không cần dùng đến phần mềm</a>
+                            <p>Thủ thuật</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+<!--------------------------------Footer----------------------------->
+<footer>
+    <div class="footer_container">
+        <div class="sticky_footer">
+            <ul>
+                <li><a href="#">Tích điểm quà tặng</a></li>
+                <li><a href="#">Lịch sử mua hàng</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+                <li><a href="#">Giao hàng & Thanh toán</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Hướng dẫn mua online</a></li>
+                <li><a href="#">Bán hàng doanh nghiệp</a></li>
+                <li><a href="#">Chất lượng phục vụ</a></li>
+                <li><a href="#">Cảnh báo giả mạo</a></li>
+                <li><a href="#"> Gửi góp ý, khiếu nại</a></li>
+            </ul>
+        </div>
+        <div class="middle_footer">
+            <h3>Tổng đài hỗ trợ</h3>
+            <ul>
+                <span><li><a href="#">Gọi mua:</a></li><p style="margin-left: 13px;"><mark>1900 232 460</mark> (8:00 - 21:30)</p></span>
+                <span><li><a href="#">Khiếu nại:</a></li><p><mark>1800.1062</mark> (8:00 - 21:30)</p></span>
+                <span><li><a href="#">Bảo hành:</a></li><p><mark>1900 232 464</mark> (8:00 - 21:30)</p></span>
+                
+            </ul>
+        </div>
+        <div class="last_footer">
+            <h4>Website cùng tập đoàn</h4>
+            <div>
+                <img class="img_1" src="Image/Brand/top zone.png">
+                <img class="img_2" src="Image/Brand/dienmayxanh.png">
+                <img class="img_3" src="Image/Brand/bachhoaxanh.png">
+                <img class="img_4" src="Image/Brand/nhathuocankhang.png">
+            </div>
+            <div>
+                <img class="img_5" src="Image/Brand/ava.png">
+                <img class="img_6" src="Image/Brand/vieclam.png">
+                <img class="img_7" src="Image/Brand/erablue.png">
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="assets/javascript/Index.js"></script>
+    <script src="assets/javascript/Cart.js"></script>
+    <script src="assets/javascript/Cart-Main.js"></script>
+</body>
+</html>

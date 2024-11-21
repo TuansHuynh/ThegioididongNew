@@ -1,0 +1,140 @@
+.back_btn{
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    margin-right: 250px;
+    width: 550px;
+}
+.back_btn a{
+    margin-right: 250px;
+}
+/* ---------order list--------- */
+.order{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.order_container{
+    margin-top: 20px;
+}
+.order_list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.order_list ul li{
+    font-weight: bolder;
+}
+/* ------------price------------ */
+/* .price-total {
+    margin-top: 10px;
+    color: black;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.price-total p {
+    font-weight: bold;
+    margin-right: -30px;
+} */
+/* ----------Product in cart-------------- */
+/* .order table {
+    width: 100%;
+}
+.order table thead tr th:first-child {
+    text-align: left;
+}
+.order table thead tr th {
+    text-align: center;
+}
+.order table tr td {
+    padding: 12px 0;
+}
+.order tbody tr td img{
+    width: 50px;
+}
+tbody td p{
+    display: flex;
+    justify-content: center;
+} */
+/* -------------------------------- */
+.order {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.order h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order_container {
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.order_list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order_list th, .order_list td {
+    text-align: left;
+    padding: 12px;
+}
+
+.order_list th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.order_list td img {
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+.order_list td {
+    vertical-align: middle;
+}
+
+.price-total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.price-total span {
+    font-size: 18px;
+    color: #333;
+}
+
+.cart-delete {
+    color: #ff0000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px;
+}
+.price-total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 16px; /* Kích thước chữ có thể điều chỉnh theo ý bạn */
+}
+
+.price-total span {
+    display: inline-block; /* Thêm thuộc tính này */
+    min-width: 100px; /* Đảm bảo chiều rộng tối thiểu đủ lớn */
+    white-space: nowrap; /* Ngăn việc xuống dòng */
+    font-size: 18px;
+    color: #333;
+}

@@ -1,0 +1,138 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.QandA{
+    font-size: 13px;
+}
+.chu-de{
+    display: flex;
+    margin: 30px 0;
+}
+.chu-de_left{
+    display: flex;
+    flex-direction: column ;
+}
+.chu-de_left h2{
+    margin-bottom: 5px;
+}
+.chu-de_container{
+    margin-right: 50px;
+}
+.content{
+    width: 300px;
+}
+.content img{
+    width: 50px;
+}
+.content label, .content h3{
+    display: flex;
+}
+.content label, .content i {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.content h3{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+.content i{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+.sub_content{
+    display: none;
+    border: 1px solid #6d6d6d;
+    border-radius: 10px;
+}
+.sub_content ul li{
+    margin: 0 auto 0 30px ;
+    padding: 5px;
+    border-bottom: 1px solid #6d6d6d;
+}
+.menu_content_1:hover .sub_1{
+    display: block;
+}
+.menu_content_2:hover .sub_2{
+    display: block;
+}
+.menu_content_3:hover .sub_3{
+    display: block;
+}
+.menu_content_4:hover .sub_4{
+    display: block;
+}
+.menu_content_5:hover .sub_5{
+    display: block;
+}
+.menu_content_6:hover .sub_6{
+    display: block;
+}
+.menu_content_7:hover .sub_7{
+    display: block;
+}
+.menu_content_8:hover .sub_8{
+    display: block;
+}
+.menu_content_9:hover .sub_9{
+    display: block;
+}
+.chu-de_right img{
+ width: 150px;
+}
+.chude_right-head{
+    display: flex;
+    margin-bottom: 40px;
+}
+.chude_right-start{
+    display: flex;
+    flex-direction: column;
+}
+.chude_right-start img{
+    width: 500px;
+}
+.chude_right-start a{
+    margin: 15px;
+    font-size:23px;
+    font-weight: 900;
+    width: 450px;
+}
+.chude_right-container-main{
+    margin: 0 0 0 30px ;
+}
+.chu-de_sub{
+    display: flex;
+}
+.chu-de_sub a{
+    width: 350px;
+    margin: 10px;
+}
+.chu-de_sub b{
+    background-color: #dbdbdb;
+    width: 40px;
+    height: 40px; 
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.chu-de_sub_1{
+    display: flex;
+    margin: 20px;
+}
+.chu-de_sub_1 a,.chu-de_sub_1 p{
+    margin-left: 20px;
+}
+.chu-de_sub_1 a{
+    font-size: 20px;
+}
+.chu-de_sub_1 p{
+    margin-top: 10px;
+    color: #2a2a2a;
+}
