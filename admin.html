@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - TGDĐ</title>
-    <link rel="icon" href="Image/logo-icon.jpg">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="assets/css/admin.css">
 </head>
 <body>
-    <div>
-        <h1>Tổng quát</h1>
-        <div>
-            <div>
-                <ul>
-                    <li>Khách hàng</li>
-                    <li>Sản phẩm</li>
-                    <li>Hóa đơn</li>
-                    <li>Giá</li>
-                    <li>...</li>
-                </ul>
-            </div>
-            <div>
-                
-            </div>
-        </div>
+    <div class="dashboard">
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="admin.html">Manage Users</a></li>
+                <li><a href="php/manage_product.php">Manage Products</a></li> <!-- Liên kết tới trang quản lý sản phẩm -->
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Welcome, Admin!</h2>
+            <p>Here is an overview of your system:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>admin</td>
+                        <td>Super Admin</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>editor1</td>
+                        <td>Editor</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
     </div>
 </body>
 </html>

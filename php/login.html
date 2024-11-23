@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="assets/css/Login.css">
-    <link rel="icon" href="Image/logo-icon.jpg">
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <title id="page-title">Login Your Account</title> <!-- Tiêu đề mặc định là Login -->
+    <link rel="stylesheet" href="Login.css">
+    <link rel="icon" href="../Image/logo-icon.jpg">
 </head>
 <body>
-    <form class="container">
+    <div class="container">
+        <!-- Toggle buttons -->
         <div class="toggle-buttons">
-            <button class="toggle-btn" data-target="login">Login</button>
-            <button class="toggle-btn" data-target="register">Register</button>
+            <button class="toggle-btn active" data-target="login" onclick="changeTitle('Login')">Login</button>
+            <button class="toggle-btn" data-target="register" onclick="changeTitle('Register')">Register</button>
         </div>
+        
+        <!-- Form Đăng Nhập -->
         <div class="form-box login active">
-            <form action="php/login.php" method="POST">
+            <form action="login.php" method="POST">
                 <h1>Login</h1>
                 <div class="input-box">
                     <input type="text" name="username" placeholder="Username" required>
@@ -28,7 +30,7 @@
                 <div class="forgot-link">
                     <a href="#">Forgot password?</a>
                 </div>
-                <button type="submit" class="btn" data-target="login-form">Login</button>
+                <button type="submit" class="btn">Login</button>
                 <p>Or login with social platforms</p>
                 <div class="social-icons">
                     <a href="#"><i class='bx bxl-google'></i></a>
@@ -38,8 +40,8 @@
         </div>
     
         <!-- Form Đăng Ký -->
-        <div class="form-box register ">
-            <form action="php/register.php" method="POST">
+        <div class="form-box register">
+            <form action="register.php" method="POST">
                 <h1>Registration</h1>
                 <div class="input-box">
                     <input type="text" name="username" placeholder="Username" required>
@@ -53,6 +55,13 @@
                     <input type="password" name="password" placeholder="Password" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
+                <!-- Thêm trường chọn vai trò -->
+                <div class="input-box">
+                    <select name="user_role" required>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
                 <button type="submit" class="btn">Register</button>
                 <p>Or register with social platforms</p>
                 <div class="social-icons">
@@ -61,7 +70,14 @@
                 </div>
             </form>
         </div>
-    </form>
+    </div>
+
+    <script src="login.js"></script>
+    <script>
+        // Chức năng thay đổi tiêu đề trang khi chuyển giữa các form
+        function changeTitle(title) {
+            document.getElementById("page-title").innerText = title; // Thay đổi tiêu đề
+        }
+    </script>
 </body>
-    <script src="assets/javascript/login.js"></script>
 </html>

@@ -1,53 +1,47 @@
 <?php
-// Kết nối với cơ sở dữ liệu
-$serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";
-$connectionOptions = [
-    "Database" => "Thegioididong_admin",
-    "UID" => "sa",
-    "PWD" => "123"
-];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Kết nối cơ sở dữ liệu SQL Server
+    $serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";  // Tên máy chủ của bạn (SQL Server)
+    $username = "sa";          // Tên người dùng cơ sở dữ liệu
+    $password = "123";         // Mật khẩu cơ sở dữ liệu
+    $dbName = "Thegioididong_admin";  // Tên cơ sở dữ liệu
 
-$conn = sqlsrv_connect($serverName, $connectionOptions);
+    // Cấu hình kết nối
+    $connectionOptions = [
+        "Database" => $dbName,
+        "UID" => $username,
+        "PWD" => $password
+    ];
 
-if ($conn === false) {
-    die(print_r(sqlsrv_errors(), true));
-}
+    // Kết nối với SQL Server
+    $conn = sqlsrv_connect($serverName, $connectionOptions);
 
-// Xử lý dữ liệu từ form đăng ký
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
+    if ($conn === false) {
+        die(print_r(sqlsrv_errors(), true));  // Nếu kết nối không thành công, hiển thị lỗi
+    }
+
+    // Lấy thông tin từ form đăng ký
+    $user = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $pass = $_POST['password'];
+    $role = $_POST['user_role']; // Lấy thông tin role từ form
 
-    // Kiểm tra username hoặc email đã tồn tại chưa
-    $checkSql = "SELECT * FROM Users WHERE Username = ? OR Email = ?";
-    $checkParams = [$username, $email];
-    $checkStmt = sqlsrv_query($conn, $checkSql, $checkParams);
+    // Sử dụng prepared statements để tránh SQL Injection
+    $sql = "INSERT INTO users (username, email, password, user_role) VALUES (?, ?, ?, ?)";
+    $params = array($user, $email, $pass, $role); // Gửi cả giá trị role vào câu truy vấn
 
-    if ($checkStmt === false) {
-        die(print_r(sqlsrv_errors(), true));
-    }
+    // Thực thi câu lệnh SQL với tham số
+    $stmt = sqlsrv_query($conn, $sql, $params);
 
-    if (sqlsrv_has_rows($checkStmt)) {
-        // Username hoặc Email đã tồn tại
-        echo "<script>alert('Username hoặc Email đã tồn tại!');</script>";
-        echo "<script>window.history.back();</script>";
+    if ($stmt === false) {
+        die(print_r(sqlsrv_errors(), true));  // Nếu có lỗi trong truy vấn
     } else {
-        // Thêm người dùng mới vào cơ sở dữ liệu
-        $insertSql = "INSERT INTO Users (Username, Email, Password) VALUES (?, ?, ?)";
-        $insertParams = [$username, $email, $password];
-        $insertStmt = sqlsrv_query($conn, $insertSql, $insertParams);
-
-        if ($insertStmt === false) {
-            die(print_r(sqlsrv_errors(), true));
-        } else {
-            echo "<script>alert('Đăng ký thành công!');</script>";
-            echo "<script>window.location.href = '../index.html';</script>";
-        }
+        // Sau khi đăng ký thành công, chuyển hướng đến trang login.html
+        header("Location: login.html");  
+        exit();  // Dừng thực thi script sau khi chuyển hướng
     }
 
-    sqlsrv_free_stmt($checkStmt);
-    sqlsrv_free_stmt($insertStmt);
-    sqlsrv_close($conn);
+    sqlsrv_free_stmt($stmt);  // Giải phóng bộ nhớ của statement
+    sqlsrv_close($conn);  // Đóng kết nối
 }
 ?>

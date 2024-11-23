@@ -1,3 +1,6 @@
+<?php
+header("Content-type: text/css; charset: UTF-8");
+?>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -96,6 +99,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
-td{
+tbody tr td{
+    text-align: center;
+}
+thead tr th{
     text-align: center;
 }
