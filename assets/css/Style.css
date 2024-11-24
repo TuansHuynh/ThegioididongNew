@@ -30,7 +30,7 @@ input:focus {
 }
 
 .header_banner {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     display: flex;
     flex: auto;
@@ -653,5 +653,164 @@ footer {
 
     .last_footer img {
         width: 40px; /* Giảm kích thước ảnh logo cho các màn hình nhỏ hơn */
+    }
+}
+/* ------------------ Responsive Header & Menu ------------------ */
+@media (max-width: 768px) {
+    /* Header tổng quát */
+    header {
+        flex-direction: column; /* Chuyển header thành dạng cột */
+        padding: 10px 5px; /* Tăng khoảng cách padding */
+    }
+
+    .header_banner {
+        flex-direction: column; /* Điều chỉnh nội dung banner */
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .nav_logo {
+        width: 150px; /* Giảm kích thước logo */
+        margin: 10px 0;
+    }
+
+    /* Menu 1 */
+    .menu_1 {
+        flex-direction: column; /* Menu xếp dọc */
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .header_menu_1 {
+        flex-wrap: wrap; /* Chuyển menu thành dòng mới khi hết chỗ */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header_menu_1 li {
+        margin: 5px 10px;
+        font-size: 14px; /* Giảm kích thước chữ */
+        padding: 5px;
+    }
+
+    .menu_li_1, .menu_li_3, .menu_li_4 {
+        padding: 5px;
+    }
+
+    /* Menu li */
+    .menu_li_2 {
+        width: 100%; /* Chiếm hết chiều rộng màn hình */
+        padding: 10px;
+    }
+
+    .menu_li_3 i {
+        font-size: 25px; /* Giảm kích thước icon */
+    }
+
+    /* Address Container */
+    .address-container {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .address-content {
+        width: 90%; /* Chiều rộng hộp chiếm 90% màn hình */
+        height: auto;
+        padding: 15px;
+    }
+
+    .address-content h2 {
+        font-size: 16px;
+    }
+
+    .address-content form input,
+    select {
+        height: 40px;
+    }
+
+    .address-content form button {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Phụ kiện */
+    .menu_2_li {
+        align-items: flex-start;
+    }
+
+    .phu-kien_container {
+        flex-direction: column; /* Xếp phụ kiện theo cột */
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .phu-kien_container ul li {
+        margin: 5px 0; /* Giảm khoảng cách */
+        font-size: 14px;
+    }
+
+    .phu-kien_container ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 5px 2px; /* Giảm thêm padding */
+    }
+
+    .nav_logo {
+        width: 120px; /* Giảm kích thước logo thêm */
+        margin: 5px 0;
+    }
+
+    /* Menu 1 */
+    .menu_1 {
+        margin: 5px 0;
+    }
+
+    .header_menu_1 li {
+        font-size: 12px; /* Giảm kích thước chữ thêm */
+        margin: 5px;
+    }
+
+    /* Menu li */
+    .menu_li_3 i {
+        font-size: 20px; /* Tiếp tục giảm kích thước icon */
+    }
+
+    .menu_li_2 input {
+        font-size: 12px; /* Kích thước input nhỏ hơn */
+    }
+
+    /* Address Container */
+    .address-content {
+        padding: 10px;
+        width: 85%; /* Chiếm ít không gian hơn */
+    }
+
+    .address-content h2 {
+        font-size: 14px;
+    }
+
+    .address-content form input,
+    select {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .address-content form button {
+        font-size: 12px;
+    }
+
+    /* Phụ kiện */
+    .phu-kien_container ul li {
+        font-size: 12px; /* Kích thước chữ nhỏ hơn */
+    }
+
+    .phu-kien_container ul li a {
+        font-size: 12px;
     }
 }
