@@ -596,6 +596,7 @@ footer {
     .sticky_footer {
         flex-direction: column; /* Các mục trong sticky_footer sẽ xếp dọc */
         align-items: center; /* Căn giữa các phần tử */
+        text-align: center;
         width: 100%; /* Đảm bảo sticky_footer chiếm toàn bộ chiều rộng */
     }
 
