@@ -26,7 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = $_POST['password'];
     $role = $_POST['user_role']; // Lấy thông tin role từ form
 
-    // Sử dụng prepared statements để tránh SQL Injection
+    // Bỏ qua kiểm tra trùng tên người dùng và email
+
+    // Thực hiện đăng ký người dùng mới
     $sql = "INSERT INTO users (username, email, password, user_role) VALUES (?, ?, ?, ?)";
     $params = array($user, $email, $pass, $role); // Gửi cả giá trị role vào câu truy vấn
 
@@ -36,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt === false) {
         die(print_r(sqlsrv_errors(), true));  // Nếu có lỗi trong truy vấn
     } else {
-        // Sau khi đăng ký thành công, chuyển hướng đến trang login.html
-        header("Location: login.html");  
+        // Sau khi đăng ký thành công, chuyển hướng đến trang login.php
+        header("Location: login.php");  
         exit();  // Dừng thực thi script sau khi chuyển hướng
     }
 

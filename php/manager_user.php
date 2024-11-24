@@ -13,8 +13,13 @@ if ($conn === false) {
 }
 
 // Truy vấn lấy danh sách người dùng
-$sql = "SELECT  id, username, user_role FROM Users"; // Thay 'role' bằng 'user_role' nếu tên cột là 'user_role'
+$sql = "SELECT id, username, email, password, user_role FROM Users"; // Thêm 'email' vào truy vấn
 $query = sqlsrv_query($conn, $sql);
+
+// Kiểm tra nếu có lỗi trong truy vấn
+if ($query === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
 
 // Kiểm tra nếu có lỗi trong truy vấn
 if ($query === false) {
@@ -43,7 +48,7 @@ if ($query === false) {
             <ul>
                 <li><a href="./manager_user.php">Manage Users</a></li>
                 <li><a href="./manager_product.php">Manage Products</a></li> <!-- Liên kết tới trang quản lý sản phẩm -->
-                <li><a href="#settings">Settings</a></li>
+                <li><a href="./settings.php">Settings</a></li>
                 <li><a href="../index.html">Logout</a></li>
             </ul>
         </nav>
@@ -55,7 +60,10 @@ if ($query === false) {
                     <tr>
                         <th>ID</th>
                         <th>Username</th>
+                        <th>Email</th> <!-- Thêm cột Email -->
+                        <th>Password</th>
                         <th>Role</th>
+                        <th>Actions</th> <!-- Thêm cột Actions nếu muốn -->
                     </tr>
                 </thead>
                 <tbody>
@@ -63,6 +71,8 @@ if ($query === false) {
                         <tr>
                             <td><?php echo $row['id']; ?></td>
                             <td><?php echo $row['username']; ?></td>
+                            <td><?php echo $row['email']; ?></td> <!-- Hiển thị email -->
+                            <td><?php echo $row['password'] ?></td>
                             <td><?php echo $row['user_role']; ?></td>
                             <td>
                                 <!-- Thêm nút Delete -->

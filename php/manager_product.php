@@ -1,16 +1,12 @@
 <?php
-// Kết nối cơ sở dữ liệu SQL Server
-$serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";  
+
+$serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";
 $connectionOptions = [
-    "Database" => "Thegioididong_admin",  
-    "UID" => "sa",                        
-    "PWD" => "123"                        
-]; 
-
-// Kết nối cơ sở dữ liệu
+    "Database" => "Thegioididong_admin",
+    "UID" => "sa",
+    "PWD" => "123"
+];
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-
-// Kiểm tra kết nối
 if ($conn === false) {
     die("Không thể kết nối đến cơ sở dữ liệu: " . print_r(sqlsrv_errors(), true));
 }
@@ -18,8 +14,6 @@ if ($conn === false) {
 // Truy vấn danh sách sản phẩm
 $sql = "SELECT MaSP, TenSP, GiaGoc, PhanTramGiamGia, GiaSauGiamGia, Anh FROM SanPham";
 $result = sqlsrv_query($conn, $sql);
-
-// Kiểm tra truy vấn
 if ($result === false) {
     die("Truy vấn không thành công: " . print_r(sqlsrv_errors(), true));
 }
@@ -43,7 +37,7 @@ if ($result === false) {
             <ul>
                 <li><a href="./manager_user.php">Manage Users</a></li>
                 <li><a href="./manager_product.php">Manage Products</a></li>
-                <li><a href="#settings">Settings</a></li>
+                <li><a href="./settings.php">Settings</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
         </nav>
@@ -71,15 +65,14 @@ if ($result === false) {
                                 <td><?= $row['PhanTramGiamGia'] ?>%</td>
                                 <td><?= number_format($row['GiaSauGiamGia'], 2) ?></td>
                                 <td>
-                                    <?php if ($row['Anh']): ?>
-                                        <img src="<?= $row['Anh'] ?>" alt=<?= htmlspecialchars($row['TenSP']) ?> style="width: 50px; height: auto;">
+                                    <?php if (!empty($row['Anh'])): ?>
+                                        <img src="/<?= htmlspecialchars($row['Anh']) ?>" alt="<?= htmlspecialchars($row['TenSP']) ?>" style="width: 50px; height: auto;">
                                     <?php else: ?>
                                         No Image
                                     <?php endif; ?>
                                 </td>
                                 <td>
                                     <a href="edit_product.php?id=<?= $row['MaSP'] ?>" class="btn edit">Edit</a>
-                                    <!-- Thêm liên kết Delete -->
                                     <a href="./delete_product.php?id=<?= $row['MaSP'] ?>" class="btn delete" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
                                 </td>
                             </tr>

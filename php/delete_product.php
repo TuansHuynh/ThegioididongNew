@@ -1,4 +1,7 @@
 <?php
+// Đường dẫn tuyệt đối tới thư mục chứa ảnh
+$uploadDir = 'C:\Users\nkocn\OneDrive\Desktop\Thegioididong\uploads';
+
 // Kết nối cơ sở dữ liệu SQL Server
 $serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";
 $connectionOptions = [
@@ -8,30 +11,58 @@ $connectionOptions = [
 ]; 
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 
-// Kiểm tra kết nối
 if ($conn === false) {
     die("Không thể kết nối đến cơ sở dữ liệu: " . print_r(sqlsrv_errors(), true));
 }
 
-// Kiểm tra xem có ID sản phẩm trong URL không
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Chuẩn bị câu lệnh xóa sản phẩm
-    $sql = "DELETE FROM SanPham WHERE MaSP = ?";
-    $params = array($id);
-    $stmt = sqlsrv_query($conn, $sql, $params);
+    // Lấy thông tin file ảnh của sản phẩm từ cơ sở dữ liệu
+    $sqlSelect = "SELECT Anh FROM SanPham WHERE MaSP = ?";
+    $paramsSelect = array($id);
+    $stmtSelect = sqlsrv_query($conn, $sqlSelect, $paramsSelect);
 
-    // Kiểm tra và thông báo kết quả
-    if ($stmt === false) {
-        die("Không thể xóa sản phẩm: " . print_r(sqlsrv_errors(), true));
-    } else {
-        // Sau khi xóa thành công, chuyển hướng lại trang quản lý sản phẩm
+    if ($stmtSelect === false) {
+        die("Không thể lấy thông tin sản phẩm: " . print_r(sqlsrv_errors(), true));
+    }
+
+    if ($row = sqlsrv_fetch_array($stmtSelect, SQLSRV_FETCH_ASSOC)) {
+        $imageFileName = trim($row['Anh']);
+
+        // Đường dẫn đầy đủ của ảnh
+        $imagePath = $uploadDir . $imageFileName;
+        echo "Debug: Đường dẫn ảnh đầy đủ: $imagePath<br>";
+
+        // Kiểm tra và xóa file ảnh
+        if (file_exists($imagePath)) {
+            if (unlink($imagePath)) {
+                echo "File ảnh đã xóa thành công.<br>";
+            } else {
+                echo "Lỗi: Không thể xóa file ảnh. Kiểm tra quyền trên thư mục.<br>";
+            }
+        } else {
+            echo "Lỗi: File ảnh không tồn tại tại đường dẫn: $imagePath<br>";
+        }
+
+        // Xóa sản phẩm khỏi cơ sở dữ liệu
+        $sqlDelete = "DELETE FROM SanPham WHERE MaSP = ?";
+        $paramsDelete = array($id);
+        $stmtDelete = sqlsrv_query($conn, $sqlDelete, $paramsDelete);
+
+        if ($stmtDelete === false) {
+            die("Không thể xóa sản phẩm: " . print_r(sqlsrv_errors(), true));
+        }
+
+        // Chuyển hướng về trang quản lý sản phẩm
         header("Location: manager_product.php");
         exit();
+    } else {
+        echo "Lỗi: Sản phẩm không tồn tại.<br>";
     }
+} else {
+    echo "Lỗi: Không tìm thấy ID sản phẩm trong URL.<br>";
 }
 
-// Đóng kết nối
 sqlsrv_close($conn);
 ?>

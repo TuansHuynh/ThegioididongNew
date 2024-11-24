@@ -169,3 +169,9 @@ h1 {
     background-color: #007BFF;
     color: #fff;
 }
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}

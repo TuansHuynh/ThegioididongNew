@@ -1,5 +1,4 @@
 <?php
-// Kết nối với cơ sở dữ liệu
 $serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";
 $connectionOptions = [
     "Database" => "Thegioididong_admin",
@@ -8,7 +7,7 @@ $connectionOptions = [
 ];
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 if ($conn === false) {
-    die(print_r(sqlsrv_errors(), true));
+    die("Không thể kết nối cơ sở dữ liệu: " . print_r(sqlsrv_errors(), true));
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -17,49 +16,67 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $giaGoc = $_POST['GiaGoc'];
     $phanTramGiamGia = $_POST['PhanTramGiamGia'];
 
-    // Kiểm tra xem trường tên sản phẩm và giá gốc có hợp lệ không
-    if ($tenSP && $giaGoc >= 0) {
+    // Kiểm tra dữ liệu đầu vào
+    if ($tenSP && is_numeric($giaGoc) && $giaGoc >= 0) {
         // Xử lý ảnh tải lên
         if (isset($_FILES['Anh']) && $_FILES['Anh']['error'] == 0) {
             $imageTmpPath = $_FILES['Anh']['tmp_name'];
-            $imageName = $_FILES['Anh']['name'];
-            $imageExtension = pathinfo($imageName, PATHINFO_EXTENSION);
+            $originalImageName = $_FILES['Anh']['name'];
+            $imageExtension = strtolower(pathinfo($originalImageName, PATHINFO_EXTENSION));
 
-            // Kiểm tra định dạng ảnh (có thể thêm kiểm tra loại ảnh ở đây)
+            // Kiểm tra định dạng ảnh
             $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-            if (in_array(strtolower($imageExtension), $allowedExtensions)) {
-                // Tạo đường dẫn lưu trữ ảnh
-                $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/uploads/';
-                if (!is_dir($uploadDir)) {
-                    mkdir($uploadDir, 0777, true);  // Tạo thư mục nếu chưa có
+            if (in_array($imageExtension, $allowedExtensions)) {
+                // Tạo đường dẫn lưu ảnh
+                $uploadDir = 'uploads/'; // Thư mục tương đối
+                $uploadAbsolutePath = $_SERVER['DOCUMENT_ROOT'] . '/' . $uploadDir;
+
+                // Tạo thư mục nếu chưa tồn tại
+                if (!is_dir($uploadAbsolutePath)) {
+                    if (!mkdir($uploadAbsolutePath, 0777, true)) {
+                        die("Không thể tạo thư mục lưu ảnh.");
+                    }
                 }
-                $newImageName = uniqid() . '.' . $imageExtension;
-                $uploadPath = $uploadDir . $newImageName;
+
+                // Sử dụng tên ảnh gốc
+                $newImageName = $originalImageName;
+                $uploadPath = $uploadAbsolutePath . $newImageName;
+
+                // Nếu file trùng lặp, thêm hậu tố vào tên
+                $counter = 1;
+                while (file_exists($uploadPath)) {
+                    $newImageName = pathinfo($originalImageName, PATHINFO_FILENAME) . "_$counter." . $imageExtension;
+                    $uploadPath = $uploadAbsolutePath . $newImageName;
+                    $counter++;
+                }
 
                 // Di chuyển ảnh vào thư mục uploads
                 if (move_uploaded_file($imageTmpPath, $uploadPath)) {
-                    // Chuẩn bị câu truy vấn SQL để thêm sản phẩm vào cơ sở dữ liệu
+                    // Lưu đường dẫn tương đối vào cơ sở dữ liệu
+                    $relativePath = $uploadDir . $newImageName;
+
+                    // Thêm sản phẩm vào cơ sở dữ liệu
                     $sql = "INSERT INTO SanPham (TenSP, GiaGoc, PhanTramGiamGia, Anh) 
                             VALUES (?, ?, ?, ?)";
-                    $params = array($tenSP, $giaGoc, $phanTramGiamGia, $uploadPath);
+                    $params = array($tenSP, $giaGoc, $phanTramGiamGia, $relativePath);
                     $stmt = sqlsrv_query($conn, $sql, $params);
 
                     if ($stmt === false) {
-                        die(print_r(sqlsrv_errors(), true));
+                        die("Lỗi thêm sản phẩm: " . print_r(sqlsrv_errors(), true));
                     } else {
-                        echo '<p style="text-align: center; margin-top: 20px">Product added successfully!</p>';
+                        echo '<p style="text-align: center; margin-top: 20px">Thêm sản phẩm thành công!</p>';
                     }
                 } else {
-                    echo "<p>Failed to upload image.</p>";
+                    echo "<p>Không thể tải ảnh lên. Vui lòng thử lại.</p>";
                 }
             } else {
-                echo "<p>Invalid image format. Only jpg, jpeg, png, gif are allowed.</p>";
+                echo "<p>Định dạng ảnh không hợp lệ. Chỉ hỗ trợ jpg, jpeg, png, gif.</p>";
             }
         } else {
-            echo "<p>Please upload an image.</p>";
+            echo "<p>Vui lòng tải lên một ảnh hợp lệ.</p>";
         }
     } else {
-        echo "<p>Invalid input. Please check your data.</p>";
+        echo "<p>Thông tin sản phẩm không hợp lệ. Vui lòng kiểm tra lại.</p>";
     }
 }
 
