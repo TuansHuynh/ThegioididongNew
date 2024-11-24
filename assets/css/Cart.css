@@ -1,109 +1,333 @@
-    .back_btn{
-        font-size: 20px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        justify-content: center;
-        margin-right: 250px;
-        width: 550px;
-    }
-    .back_btn a{
-        margin-right: 250px;
-    }
-    /* ---------order list--------- */
-    .order{
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    .order_container{
-        margin-top: 20px;
-    }
-    .order_list ul{
-        display: flex;
-        justify-content: space-between;
-    }
-    .order_list ul li{
-        font-weight: bolder;
-    }
-    
-    .order {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-    }
+.back_btn {
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  margin-right: 250px;
+  width: 550px;
+}
+.back_btn a {
+  margin-right: 250px;
+}
+/* ---------order list--------- */
+.order {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.order_container {
+  margin-top: 20px;
+}
+.order_list ul {
+  display: flex;
+  justify-content: space-between;
+}
+.order_list ul li {
+  font-weight: bolder;
+}
 
-    .order h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+.order {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
 
-    .order_container {
-        /* border: 1px solid #ddd; */
-        border-radius: 8px;
-        overflow: hidden;
-    }
+.order h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .order_list table {
-        width: 100%;
-        border-collapse: collapse;
-    }
+.order_container {
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  overflow: hidden;
+}
 
-    .order_list th, .order_list td {
-        text-align: left;
-        padding: 12px;
-    }
+.order_list table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-    .order_list th {
-        background-color: #f8f8f8;
-        font-weight: bold;
-    }
+.order_list th,
+.order_list td {
+  text-align: left;
+  padding: 12px;
+}
 
-    .order_list td img {
-        max-width: 60px;
-        margin-right: 10px;
-    }
+.order_list th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
 
-    .order_list td {
-        vertical-align: middle;
-    }
+.order_list td img {
+  max-width: 60px;
+  margin-right: 10px;
+}
 
-    .price-total {
-        text-align: right;
-        font-weight: bold;
-        margin-top: 20px;
-    }
+.order_list td {
+  vertical-align: middle;
+}
 
-    .price-total span {
-        font-size: 18px;
-        color: #333;
-    }
+.price-total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 20px;
+}
 
-    .cart-delete {
-        color: #ff0000;
-        cursor: pointer;
-        font-weight: bold;
-    }
+.price-total span {
+  font-size: 18px;
+  color: #333;
+}
 
-    input[type="number"] {
-        width: 50px;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        padding: 4px;
-    }
-    .price-total {
-        text-align: right;
-        font-weight: bold;
-        margin-top: 20px;
-        font-size: 16px; /* Kích thước chữ có thể điều chỉnh theo ý bạn */
-    }
+.cart-delete {
+  color: #ff0000;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-    .price-total span {
-        display: inline-block; /* Thêm thuộc tính này */
-        min-width: 100px; /* Đảm bảo chiều rộng tối thiểu đủ lớn */
-        white-space: nowrap; /* Ngăn việc xuống dòng */
-        font-size: 18px;
-        color: #333;
-    }
+input[type="number"] {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px;
+}
+.price-total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 16px; /* Kích thước chữ có thể điều chỉnh theo ý bạn */
+}
+
+.price-total span {
+  display: inline-block; /* Thêm thuộc tính này */
+  min-width: 100px; /* Đảm bảo chiều rộng tối thiểu đủ lớn */
+  white-space: nowrap; /* Ngăn việc xuống dòng */
+  font-size: 18px;
+  color: #333;
+}
+/* ----- Back Button ----- */
+.back_btn {
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 250px;
+  width: 550px;
+}
+
+.back_btn a {
+  margin-right: 250px;
+}
+
+/* ----- Order List ----- */
+.order {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.order_container {
+  margin-top: 20px;
+}
+
+.order_list ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order_list ul li {
+  font-weight: bolder;
+}
+
+.order {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.order h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order_container {
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.order_list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order_list th,
+.order_list td {
+  text-align: left;
+  padding: 12px;
+}
+
+.order_list th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.order_list td img {
+  max-width: 60px;
+  margin-right: 10px;
+}
+
+.order_list td {
+  vertical-align: middle;
+}
+
+.price-total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.price-total span {
+  font-size: 18px;
+  color: #333;
+}
+
+.cart-delete {
+  color: #ff0000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.price-total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 16px; /* Kích thước chữ có thể điều chỉnh theo ý bạn */
+}
+
+.price-total span {
+  display: inline-block; /* Thêm thuộc tính này */
+  min-width: 100px; /* Đảm bảo chiều rộng tối thiểu đủ lớn */
+  white-space: nowrap; /* Ngăn việc xuống dòng */
+  font-size: 18px;
+  color: #333;
+}
+
+/* ----- Thanh toán ----- */
+.total_container {
+  margin-top: 40px;
+}
+
+.total {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.total h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.payment-info,
+.payment-method {
+  margin-bottom: 20px;
+}
+
+.payment-info h3,
+.payment-method h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.payment-info div,
+.payment-method div {
+  margin-bottom: 10px;
+}
+
+.payment-info label,
+.payment-method label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+.total-payment {
+  font-size: 18px;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.total-payment span {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+/* ----- Responsive Design ----- */
+@media (max-width: 768px) {
+  .dashboard {
+    width: 95%;
+  }
+
+  .order_list table,
+  .payment-info,
+  .payment-method {
+    width: 100%;
+  }
+
+  .price-total {
+    text-align: left;
+  }
+
+  .total h2 {
+    font-size: 22px;
+  }
+
+  button {
+    width: auto;
+    margin: 0 auto;
+  }
+}
