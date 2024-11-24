@@ -44,7 +44,7 @@ if ($query === false) {
                 <li><a href="./manager_user.php">Manage Users</a></li>
                 <li><a href="./manager_product.php">Manage Products</a></li> <!-- Liên kết tới trang quản lý sản phẩm -->
                 <li><a href="#settings">Settings</a></li>
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="../index.html">Logout</a></li>
             </ul>
         </nav>
         <main>

@@ -72,7 +72,7 @@ if ($result === false) {
                                 <td><?= number_format($row['GiaSauGiamGia'], 2) ?></td>
                                 <td>
                                     <?php if ($row['Anh']): ?>
-                                        <img src="<?= $row['Anh'] ?>" alt="Product Image" style="width: 50px; height: auto;">
+                                        <img src="<?= $row['Anh'] ?>" alt=<?= htmlspecialchars($row['TenSP']) ?> style="width: 50px; height: auto;">
                                     <?php else: ?>
                                         No Image
                                     <?php endif; ?>

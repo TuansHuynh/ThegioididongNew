@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     if ($stmt === false) {
                         die(print_r(sqlsrv_errors(), true));
                     } else {
-                        echo "<p>Product added successfully!</p>";
+                        echo '<p style="text-align: center; margin-top: 20px">Product added successfully!</p>';
                     }
                 } else {
                     echo "<p>Failed to upload image.</p>";
@@ -97,7 +97,7 @@ sqlsrv_close($conn);
             </div>
             <button type="submit">Add Product</button>
         </form>
-        <p><button onclick="window.location.href='./manager_product.php'">Go back to Product Management</button></p>
+        <p style="text-align: center;"><button onclick="window.location.href='./manager_product.php'" style="width: fit-content;">Go back to Product Management</button></p>
     </div>
 </body>
 </html>
