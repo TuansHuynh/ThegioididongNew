@@ -1,0 +1,130 @@
+/* Các quy tắc CSS chung cho form */
+form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style cho các trường input */
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Hiệu ứng khi focus vào các input */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus,
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Style cho nhãn (label) */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Cải thiện vẻ ngoài của button */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi hover vào button */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Cải thiện sự hiển thị của Product Image */
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+/* Tạo khoảng cách giữa các mục */
+div {
+    margin-bottom: 20px;
+}
+
+/* Style cho các trường số và sản phẩm */
+input[type="number"] {
+    background-color: #f9f9f9;
+}
+
+select {
+    background-color: #fafafa;
+}
+
+/* Thêm một chút đổ bóng cho các trường khi hover */
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover {
+    border-color: #888;
+}
+
+/* Style cho các tiêu đề của form */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Cải thiện giao diện của form tổng thể */
+main {
+    margin-top: 50px;
+}
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.back-button:active {
+    background-color: #3e8e41;
+    transform: scale(0.95);
+}

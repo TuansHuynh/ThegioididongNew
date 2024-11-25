@@ -47,14 +47,14 @@ if ($query === false) {
         <nav>
             <ul>
                 <li><a href="./manager_user.php">Manage Users</a></li>
-                <li><a href="./manager_product.php">Manage Products</a></li> <!-- Liên kết tới trang quản lý sản phẩm -->
-                <li><a href="./settings.php">Settings</a></li>
+                <li><a href="./manager_product.php">Manage Products</a></li>
+                <li><a href="./settings.php">Settings Account</a></li>
                 <li><a href="../index.html">Logout</a></li>
             </ul>
         </nav>
         <main>
-            <h2>Welcome, Admin!</h2>
-            <p>Here is an overview of your system:</p>
+            <h2 style="text-align: center;">Welcome, Admin!</h2>
+            <p style="text-align: center;">Here is an overview of your system:</p>
             <table>
                 <thead>
                     <tr>

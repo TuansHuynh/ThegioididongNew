@@ -1,22 +1,28 @@
 <?php
 session_start();
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['user'])) {
-    $serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";
-    $connectionOptions = [
-        "Database" => "Thegioididong_admin",
-        "UID" => "sa",
-        "PWD" => "123"
-    ];
-    $conn = sqlsrv_connect($serverName, $connectionOptions);
 
-    if ($conn === false) {
-        die(print_r(sqlsrv_errors(), true));
-    }
+if (!isset($_SESSION['user']) || $_SESSION['role'] !== 'admin') {
+    header("Location: login.html");
+    exit();
+}
 
-    // Lấy thông tin từ form
+$serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";
+$connectionOptions = [
+    "Database" => "Thegioididong_admin",
+    "UID" => "sa",
+    "PWD" => "123"
+];
+
+$conn = sqlsrv_connect($serverName, $connectionOptions);
+
+if ($conn === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
     $currentPassword = $_POST['current_password'];
     $newPassword = $_POST['new_password'];
-    $username = $_SESSION['user'];
 
     // Kiểm tra mật khẩu hiện tại
     $sql = "SELECT password FROM Users WHERE username = ?";
@@ -28,24 +34,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['user'])) {
     }
 
     $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
-    if ($row['password'] == $currentPassword) {
-        // Cập nhật mật khẩu mới
-        $sql = "UPDATE Users SET password = ? WHERE username = ?";
-        $params = array($newPassword, $username);
-        $stmt = sqlsrv_query($conn, $sql, $params);
 
-        if ($stmt === false) {
+    if ($row && $row['password'] === $currentPassword) {
+        // Nếu mật khẩu hiện tại khớp, cập nhật mật khẩu mới
+        $updateSql = "UPDATE Users SET password = ? WHERE username = ?";
+        $updateParams = array($newPassword, $username);
+        $updateStmt = sqlsrv_query($conn, $updateSql, $updateParams);
+
+        if ($updateStmt === false) {
             die(print_r(sqlsrv_errors(), true));
         }
 
-        sqlsrv_free_stmt($stmt);
-        sqlsrv_close($conn);
-
-        // Chuyển hướng về trang Settings
-        header("Location: settings.php");
-        exit();
+        echo "<script>alert('Password updated successfully.'); window.location.href = 'settings.php';</script>";
     } else {
-        echo "Mật khẩu hiện tại không đúng.";
+        echo "<script>alert('Current password is incorrect.'); window.history.back();</script>";
     }
 
     sqlsrv_free_stmt($stmt);

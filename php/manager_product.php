@@ -1,5 +1,4 @@
 <?php
-
 $serverName = "HUYNH-ANH-TUAN\TUANSHUYNH";
 $connectionOptions = [
     "Database" => "Thegioididong_admin",
@@ -37,7 +36,7 @@ if ($result === false) {
             <ul>
                 <li><a href="./manager_user.php">Manage Users</a></li>
                 <li><a href="./manager_product.php">Manage Products</a></li>
-                <li><a href="./settings.php">Settings</a></li>
+                <li><a href="./settings.php">Settings Account</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
         </nav>

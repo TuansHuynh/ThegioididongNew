@@ -1,7 +1,6 @@
 <?php
 header("Content-type: text/css; charset: UTF-8");
 ?>
-/* Body Styling */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -25,7 +24,7 @@ header {
 nav {
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 nav ul {
@@ -177,3 +176,4 @@ main table img {
         width: 50px;
     }
 }
+
